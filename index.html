@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presente de Aniversário</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="screen intro active" id="introScreen">
+        <div class="intro-copy">
+          <div class="eyebrow">🎀 Protocolo de aniversário iniciado</div>
+          <h1>Você recebeu uma missão.</h1>
+          <p class="lead">
+            Uma garotinha chibi esperaçosamente espelhada em você 🫵 foi
+            designada para cuidar do clima do aniversário. Dê um pouco de café,
+            carinho e comemoração para ativar o ⭐<b>modo especial</b>⭐.
+          </p>
+          <div class="actions">
+            <button id="startBtn">Começar missão</button>
+          </div>
+        </div>
+        <div class="intro-card">
+          <div class="ribbon">mascote oficial do presente</div>
+          <canvas id="introCanvas" width="520" height="540"></canvas>
+        </div>
+      </section>
+
+      <section class="screen main" id="gameScreen">
+        <div class="scene">
+          <canvas id="petalCanvas" width="760" height="760"></canvas>
+          <canvas id="stage" width="760" height="760"></canvas>
+          <div class="speech" id="speechBubble">
+            oi... detectei um aniversário importante ✨
+          </div>
+          <div class="cloud c1"></div>
+          <div class="cloud c2"></div>
+          <div class="cloud c3"></div>
+          <div class="sparkle sp1">✨</div>
+          <div class="sparkle sp2">🌸</div>
+          <div class="sparkle sp3">⭐</div>
+          <div class="sparkle sp4">🌸</div>
+          <div class="flowers">🌸 🌷 🌸 🌷 🌸</div>
+          <div class="ground"></div>
+          <div class="final-overlay" id="finalOverlay">
+            <div class="final-card">
+              <canvas
+                class="confetti"
+                id="confettiCanvas"
+                width="700"
+                height="480"
+              ></canvas>
+              <div class="big-emoji">🎉 💖 🎂</div>
+              <h2>Feliz aniversário!</h2>
+              <p id="finalMessage">
+                O modo especial foi desbloqueado… ✨ <br />
+                Espero que, a partir de agora, seus dias venham cheios de momentos leves, coisas boas e
+                muitos sorrisos sinceros. <br />
+                Que essa nova fase seja gentil comvocê 💖
+              </p>
+              <div class="footer-actions">
+                <button id="replayBtn">Jogar de novo</button>
+                <button id="sparkBtn">Mais confete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="panel">
+            <h2>Suporte da aniversariante</h2>
+            <p>
+              Ajude a chibi a carregar os status certos. Quando tudo estiver
+              alto o suficiente, o presente final aparece.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Status</h3>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-head">
+                  <span>☕ Café</span><span id="coffeeValue">20%</span>
+                </div>
+                <div class="bar"><div class="fill" id="coffeeFill"></div></div>
+              </div>
+              <div class="stat">
+                <div class="stat-head">
+                  <span>💖 Carinho</span><span id="loveValue">15%</span>
+                </div>
+                <div class="bar"><div class="fill" id="loveFill"></div></div>
+              </div>
+              <div class="stat">
+                <div class="stat-head">
+                  <span>🎉 Festa</span><span id="partyValue">10%</span>
+                </div>
+                <div class="bar"><div class="fill" id="partyFill"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Ações</h3>
+            <div class="control-grid">
+              <button id="coffeeBtn">☕ Dar café</button>
+              <button id="loveBtn">💖 Fazer carinho</button>
+              <button id="partyBtn">🎉 Comemorar</button>
+              <button id="blinkBtn">😉 Pedir piscadinha</button>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Registro</h3>
+            <p id="logText">Aguardando comandos da missão...</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
