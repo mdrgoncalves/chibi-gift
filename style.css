@@ -47,6 +47,7 @@ body {
     linear-gradient(120deg, var(--ground2), var(--accent2));
   overflow-y: hidden;
   cursor: url("./assets/img/cursor.png"), auto;
+  zoom: 98%;
 }
 
 body {
